@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="To_Do_List">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>To Do List</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.js"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="/static/js/controllers/ListController.js"></script>
+    <script type="text/javascript" src="/static/js/factories/ItemFactory.js"></script>
+    <script type="text/javascript" src="/static/js/app.js"></script>
+
+</head>
+
+<body ng-controller="ListController">
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>To Do List</h1>
+            <p>{{ tagline }}</p>
+        </div>
+        <div>
+            <div id="new_item_form" class="row">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg text-center" placeholder="Add A New Item" ng-model="new_item.text">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="create()">Add</button>
+                </form>
+            </div>
+        </div>
+        <div id="list" class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="checkbox" ng-repeat="item in list">
+                    <label>
+						<input type="checkbox" ng-click="delete_item(item._id)"> {{ item.text }}
+					</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
