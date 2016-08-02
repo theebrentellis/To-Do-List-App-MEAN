@@ -8,11 +8,12 @@ angular.module("ListController", []).controller("ListController", function($scop
             
             $scope.list = data;
             console.log(data);
+            console.log($scope.list);
         });
         
     };
     getAll();
-    console.log($scope.list);
+    
 
     $scope.create = function(){
         ItemFactory.create($scope.new_item, function(){

@@ -16,7 +16,7 @@ angular.module("ItemFactory", []).factory("ItemFactory", function($http){
     };
 
     factory.delete_item = function(id, callback){
-        $http.post("/delete_item"+id).success(function(output){
+        $http.post("/delete_item/"+id).success(function(output){
             callback();
         });
     };

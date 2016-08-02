@@ -25,9 +25,7 @@ module.exports = (function(){
                 }
             });
         },
-
         delete_item: function(req, res){
-            console.log("In Server Controller delete_item");
             Item.remove({_id: req.params.item_id}, function(err, results){
                 if(err){
                     console.log(err);

@@ -9,7 +9,7 @@ module.exports = function(app){
         list.create(req, res);
     });
 
-    app.post("/delete_item/:item_id", function(req, res){
+    app.post('/delete_item/:item_id', function(req, res){
         list.delete_item(req, res);
     });
 };

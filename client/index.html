@@ -6,7 +6,7 @@
 
     <title>To Do List</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.js"></script>
 
@@ -38,7 +38,7 @@
             <div class="col-sm-4 col-sm-offset-4">
                 <div class="checkbox" ng-repeat="item in list">
                     <label>
-						<input type="checkbox" ng-click="delete_item(item._id)"> {{ item.text }}
+						<input type="checkbox" ng-click="delete_item(item._id)"> {{ item.item }}
 					</label>
                 </div>
             </div>
